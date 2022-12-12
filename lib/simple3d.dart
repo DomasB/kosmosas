@@ -29,6 +29,10 @@ class Simple3DState extends State<Simple3D> {
   @override
   void dispose() {
     super.dispose();
+    anchors.forEach((anchor) {
+      arAnchorManager!.removeAnchor(anchor);
+    });
+    anchors = [];
     arSessionManager!.dispose();
   }
 
@@ -84,11 +88,12 @@ class Simple3DState extends State<Simple3D> {
         this.anchors.add(newAnchor);
         // Add note to anchor
         var newNode = ARNode(
-            type: NodeType.localGLTF2,
-            uri: "assets/models/chicken.gltf",
-            scale: Vector3(0.2, 0.2, 0.2),
+            type: NodeType.webGLB,
+            uri:
+                "https://github.com/DomasB/kosmosas/blob/master/assets/models/model.glb?raw=true",
+            scale: Vector3(0.5, 0.5, 0.5),
             position: Vector3(0.0, 0.0, 0.0),
-            rotation: Vector4(1.0, 0.0, 0.0, 0.0));
+            rotation: Vector4(1.0, 0.0, 0.0, -1.5708));
         bool? didAddNodeToAnchor =
             await arObjectManager!.addNode(newNode, planeAnchor: newAnchor);
         if (didAddNodeToAnchor!) {

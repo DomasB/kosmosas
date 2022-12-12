@@ -8,6 +8,13 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "0.7.3"
+  arcore_flutter_plugin:
+    dependency: "direct main"
+    description:
+      name: arcore_flutter_plugin
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "0.1.0-null-safety.3"
   async:
     dependency: transitive
     description:
@@ -50,6 +57,13 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "1.0.5"
+  equatable:
+    dependency: transitive
+    description:
+      name: equatable
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "2.0.5"
   fake_async:
     dependency: transitive
     description:

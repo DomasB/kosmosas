@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:kosmosas/simple3d.dart';
 
+import 'arCoreView.dart';
+
 void main() {
   runApp(const MyApp());
 }
@@ -56,6 +58,13 @@ class _MyHomePageState extends State<MyHomePage> {
     );
   }
 
+  navigateToARCore() {
+    Navigator.push(
+      context,
+      MaterialPageRoute(builder: (context) => AugmentedPage()),
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     // This method is rerun every time setState is called, for instance as done
@@ -90,9 +99,13 @@ class _MyHomePageState extends State<MyHomePage> {
             // horizontal).
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
-              MaterialButton(
+              ElevatedButton(
                 onPressed: navigateTo3D,
                 child: const Text("3D"),
+              ),
+              ElevatedButton(
+                onPressed: navigateToARCore,
+                child: const Text("ARCore"),
               )
             ],
           ),

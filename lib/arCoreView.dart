@@ -62,11 +62,11 @@ class _AugmentedPageState extends State<AugmentedPage> {
         await DefaultAssetBundle.of(context).loadString('AssetManifest.json');
     final Map<String, dynamic> manifestMap = json.decode(assetsFile);
     var node = ArCoreReferenceNode(
-        // objectUrl:
-        //     "https://github.com/KhronosGroup/glTF-Sample-Models/raw/master/2.0/Duck/glTF/Duck.gltf",
+        objectUrl:
+            "https://raw.githubusercontent.com/DomasB/kosmosas/master/assets/model.gltf",
         name: 'Tower',
-        object3DFileName: 'model.gltf',
-        scale: Vector3(0.5, 0.5, 0.5),
+        // object3DFileName: 'model.gltf',
+        scale: Vector3(0.1, 0.1, 0.1),
         position: Vector3(0.0, 0.0, 0.0),
         rotation: Vector4(1.0, 0.0, 0.0, -1.5708));
     arCoreController?.addArCoreNodeToAugmentedImage(node, augmentedImage.index,

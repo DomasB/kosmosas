@@ -90,7 +90,7 @@ class Simple3DState extends State<Simple3D> {
         var newNode = ARNode(
             type: NodeType.webGLB,
             uri:
-                "https://github.com/DomasB/kosmosas/blob/master/assets/models/model.glb?raw=true",
+                "https://github.com/DomasB/kosmosas/blob/master/assets/model_big.gltf?raw=true",
             scale: Vector3(0.5, 0.5, 0.5),
             position: Vector3(0.0, 0.0, 0.0),
             rotation: Vector4(1.0, 0.0, 0.0, -1.5708));

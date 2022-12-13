@@ -58,17 +58,15 @@ class _AugmentedPageState extends State<AugmentedPage> {
   }
 
   Future _addSphere(ArCoreAugmentedImage augmentedImage) async {
-    var assetsFile =
-        await DefaultAssetBundle.of(context).loadString('AssetManifest.json');
-    final Map<String, dynamic> manifestMap = json.decode(assetsFile);
+    var node2 = ArCoreNode(image: ArCoreImage());
     var node = ArCoreReferenceNode(
-        objectUrl:
-            "https://raw.githubusercontent.com/DomasB/kosmosas/master/assets/model.gltf",
+        // objectUrl:
+        // "https://raw.githubusercontent.com/DomasB/kosmosas/master/assets/model.gltf",
         name: 'Tower',
-        // object3DFileName: 'model.gltf',
+        object3DFileName: 'model.gltf',
         scale: Vector3(0.1, 0.1, 0.1),
         position: Vector3(0.0, 0.0, 0.0),
-        rotation: Vector4(1.0, 0.0, 0.0, -1.5708));
+        rotation: Vector4(0.0, 0.0, 0.0, 0.0));
     arCoreController?.addArCoreNodeToAugmentedImage(node, augmentedImage.index,
         parentNodeName: 'None');
   }

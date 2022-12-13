@@ -92,7 +92,7 @@ class Simple3DState extends State<Simple3D> {
             uri: "assets/model.gltf",
             scale: Vector3(0.5, 0.5, 0.5),
             position: Vector3(0.0, 0.0, 0.0),
-            rotation: Vector4(0.0, 0.0, 0.0, 0.0));
+            rotation: Vector4(1.0, 0.0, 0.0, 0.0));
         bool? didAddNodeToAnchor =
             await arObjectManager!.addNode(newNode, planeAnchor: newAnchor);
         if (didAddNodeToAnchor!) {

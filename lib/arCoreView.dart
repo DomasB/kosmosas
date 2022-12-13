@@ -58,12 +58,11 @@ class _AugmentedPageState extends State<AugmentedPage> {
   }
 
   Future _addSphere(ArCoreAugmentedImage augmentedImage) async {
-    var node2 = ArCoreNode(image: ArCoreImage());
     var node = ArCoreReferenceNode(
-        // objectUrl:
-        //     "https://raw.githubusercontent.com/DomasB/kosmosas/master/assets/model.gltf",
+        objectUrl:
+            "https://raw.githubusercontent.com/DomasB/kosmosas/master/assets/model.gltf",
         name: 'Tower',
-        object3DFileName: 'model.gltf',
+        // object3DFileName: 'assets/model.gltf',
         scale: Vector3(0.1, 0.1, 0.1),
         position: Vector3(0.0, 0.0, 0.0),
         rotation: Vector4(1.0, 0.0, 0.0, 0.0));
